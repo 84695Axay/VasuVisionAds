@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        finish()
 //        InterstitialAdsHelper.showInterstitialAd(
 //            this,
 //            onAdShowed = {
@@ -54,16 +55,16 @@ class MainActivity : AppCompatActivity() {
 //            }, isPro = false
 //        )
 
-        RewardVideoAds.showRewardedAd(
-            this,
-            onAdDismissed = {
-            },
-            onAdShowed = {
-            },
-            onAdFailedToShow = { errorMsg: String?, errorCode: String? ->
-            },
-            onUserEarned = {
-            },
-        )
+//        RewardVideoAds.showRewardedAd(
+//            this,
+//            onAdDismissed = {
+//            },
+//            onAdShowed = {
+//            },
+//            onAdFailedToShow = { errorMsg: String?, errorCode: String? ->
+//            },
+//            onUserEarned = {
+//            },
+//        )
     }
 }
