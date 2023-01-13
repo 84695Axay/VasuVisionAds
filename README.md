@@ -3,17 +3,17 @@
 #
 Load InterstitialAd
 
-        loadInterstitialAd("ca-app-pub-3940256099942544/1033173712")
+        loadInterstitialAd("ID")
         
 #
 Load RewardVideoAd
 
-        loadRewardVideoAd("ca-app-pub-3940256099942544/5224354917")
+        loadRewardVideoAd("ID")
         
 #
 Load and show NativeAdvance
 
-        loadNativeAdvanceBig("ca-app-pub-3940256099942544/1044960115",
+        loadNativeAdvanceBig("ID",
             findViewById(R.id.nativeFrameLayout),
             onAdLoaded = {
 
@@ -26,7 +26,7 @@ Load and show NativeAdvance
  #
  Load and Show Adaptive Banner
  
-        loadBannerAd("ca-app-pub-3940256099942544/6300978111", findViewById(R.id.bannerFrameLayout),
+        loadBannerAd("ID", findViewById(R.id.bannerFrameLayout),
             AdaptiveBanner.BannerSize.CUSTOM, 250,
             onAdLoaded = {
 
@@ -38,7 +38,7 @@ Load and show NativeAdvance
         
         # For Custom Height
         
-        loadBannerAd("ca-app-pub-3940256099942544/6300978111", findViewById(R.id.bannerFrameLayout),
+        loadBannerAd("ID", findViewById(R.id.bannerFrameLayout),
             AdaptiveBanner.BannerSize.CUSTOM, 250,
             onAdLoaded = {
 
