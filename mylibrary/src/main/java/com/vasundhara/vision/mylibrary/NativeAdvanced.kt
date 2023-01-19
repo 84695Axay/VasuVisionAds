@@ -32,14 +32,19 @@ object NativeAdvanced {
     }
 
     fun Activity.loadNativeAdvanceBig(
-        adsIds: String, fAdContainer: FrameLayout,
-        onAdLoaded: () -> Unit?,
-        onAdFailedToLoad: (errorMsg: String?, errorCode: String?) -> Unit?,
+        adsIds: String, fAdContainer: FrameLayout, isPro: Boolean?=false,
+        onAdLoaded: () -> Unit,
+        onAdFailedToLoad: (errorMsg: String?, errorCode: String?) -> Unit,
     ) {
+        if (isPro!!){
+            onAdFailedToLoad("PRO User","PRO User")
+            return
+        }
         adsId = adsIds
         val adView = layoutInflater.inflate(R.layout.layout_native_advance_new, null) as NativeAdView
         if (!isOnline()) {
             onAdFailedToLoad("Please Check Internet Connection","Please Check Internet Connection")
+            return
         }
         if (unNativeAd == null) {
             val nativeAdOptions =
@@ -66,7 +71,7 @@ object NativeAdvanced {
                     super.onAdClicked()
                     unNativeAd = null
                     try {
-                        loadNativeAdvanceBig(adsId,fAdContainer, onAdLoaded,onAdFailedToLoad)
+                        loadNativeAdvanceBig(adsId,fAdContainer,isPro, onAdLoaded,onAdFailedToLoad)
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
