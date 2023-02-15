@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
             }, isPro = false)
         loadBannerAd("ca-app-pub-3940256099942544/6300978111", findViewById(R.id.flBanenr),
-            AdaptiveBanner.BannerSize.LARGE_BANNER,
+            AdaptiveBanner.BannerSize.CUSTOM,75,
             onAdLoaded = {
 
             },

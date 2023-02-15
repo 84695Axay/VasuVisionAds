@@ -65,6 +65,7 @@ object AdaptiveBanner {
         }
         if (!isOnline()) {
             onAdFailedToLoad("Please Check Internet Connection", "Please Check Internet Connection")
+            return
         }
         adsId = adsIds
 
