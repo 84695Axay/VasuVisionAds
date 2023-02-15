@@ -1,0 +1,26 @@
+com.vasundhara.vision.mylibrary
+color album_bar_color
+color black
+color colorAccent
+color colorBtnBg
+color colorBtnTxt
+color colorDisc
+color colorPrimary
+color colorPrimaryDark
+color colorPrimaryTransparent
+color colorTitle
+color color_un_select
+color gray
+color lightblue
+color white
+color white_diff
+id ad_app_icon
+id ad_body
+id ad_call_to_action
+id ad_headline
+id ad_media
+id guideline7
+id guideline7v
+id linearLayout6
+id textView5
+layout layout_native_advance_new

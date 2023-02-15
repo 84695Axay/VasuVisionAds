@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="album_bar_color">#ff332f30</color>
+    <color name="black">#000000</color>
+    <color name="colorAccent">#202230</color>
+    <color name="colorBtnBg">#202230</color>
+    <color name="colorBtnTxt">#FFFFFF</color>
+    <color name="colorDisc">#81202230</color>
+    <color name="colorPrimary">#202230</color>
+    <color name="colorPrimaryDark">#202230</color>
+    <color name="colorPrimaryTransparent">#9B202230</color>
+    <color name="colorTitle">#202230</color>
+    <color name="color_un_select">#ededed</color>
+    <color name="gray">#A0A2AA</color>
+    <color name="lightblue">#202230</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_diff">#EFEFEF</color>
+</resources>
