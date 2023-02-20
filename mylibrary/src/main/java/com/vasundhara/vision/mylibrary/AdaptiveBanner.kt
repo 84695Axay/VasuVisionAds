@@ -57,6 +57,7 @@ object AdaptiveBanner {
         bannerSize: BannerSize? = null,
         height: Int? = null,
         onAdLoaded: () -> Unit?,
+        onAdClicked: () -> Unit?,
         onAdFailedToLoad: (errorMsg: String?, errorCode: String?) -> Unit?,
         isPro: Boolean?=false
     ) {
@@ -65,6 +66,7 @@ object AdaptiveBanner {
         }
         if (!isOnline()) {
             onAdFailedToLoad("Please Check Internet Connection", "Please Check Internet Connection")
+
             return
         }
         adsId = adsIds
@@ -112,6 +114,7 @@ object AdaptiveBanner {
         adView.loadAd(adRequest)
         adView.adListener = object : AdListener() {
             override fun onAdClicked() {
+                onAdClicked()
             }
 
             override fun onAdClosed() {

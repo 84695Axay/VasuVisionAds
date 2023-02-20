@@ -33,6 +33,7 @@ object NativeAdvanced {
 
     fun Activity.loadNativeAdvanceBig(
         adsIds: String, fAdContainer: FrameLayout, isPro: Boolean?=false,
+        onAdClicked: () -> Unit,
         onAdLoaded: () -> Unit,
         onAdFailedToLoad: (errorMsg: String?, errorCode: String?) -> Unit,
     ) {
@@ -70,8 +71,9 @@ object NativeAdvanced {
                 override fun onAdClicked() {
                     super.onAdClicked()
                     unNativeAd = null
+                    onAdClicked()
                     try {
-                        loadNativeAdvanceBig(adsId,fAdContainer,isPro, onAdLoaded,onAdFailedToLoad)
+                        loadNativeAdvanceBig(adsId,fAdContainer,isPro,onAdClicked, onAdLoaded,onAdFailedToLoad)
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }

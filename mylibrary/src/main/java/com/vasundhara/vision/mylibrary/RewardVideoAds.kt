@@ -40,6 +40,7 @@ object RewardVideoAds {
     }
 
     fun Activity.showRewardedAd(
+        onAdClicked: () -> Unit,
         onAdShowed: () -> Unit,
         onAdDismissed: () -> Unit,
         onUserEarned: () -> Unit,
@@ -74,6 +75,10 @@ object RewardVideoAds {
                             loadRewardVideoAd(adsId)
                         }
 
+                        override fun onAdClicked() {
+                            super.onAdClicked()
+                            onAdClicked()
+                        }
                         override fun onAdShowedFullScreenContent() {
                             super.onAdShowedFullScreenContent()
                             onAdShowed()

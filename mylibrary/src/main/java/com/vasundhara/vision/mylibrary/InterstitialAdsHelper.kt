@@ -79,6 +79,7 @@ object InterstitialAdsHelper {
     }
 
     fun Activity.showInterstitialAd(
+        onAdClicked: () -> Unit,
         onAdShowed: () -> Unit,
         onAdDismissed: () -> Unit,
         onAdFailedToShow: (errorMsg: String?, errorCode: String?) -> Unit,
@@ -119,6 +120,10 @@ object InterstitialAdsHelper {
                                     isGoingToShow = false
                                 }
 
+                                override fun onAdClicked() {
+                                    super.onAdClicked()
+                                    onAdClicked()
+                                }
                                 override fun onAdFailedToShowFullScreenContent(p0: AdError) {
                                     super.onAdFailedToShowFullScreenContent(p0)
                                     Handler(Looper.getMainLooper()).postDelayed({
